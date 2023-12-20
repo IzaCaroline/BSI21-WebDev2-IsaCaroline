@@ -1,0 +1,150 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    color: #ff66b2;
+    /* Cor de botão rosa vibrante */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /* Fonte mais descontraída */
+    background-color: #ffdde1;
+    /* Cor de fundo suave */
+    padding: 30px;
+    color: #333;
+    /* Cor do texto principal */
+    background-image: url("img/background.jpg");
+    backdrop-filter: blur(20px);
+    background-position: center;
+    background-size: cover;
+}
+
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    /* Fundo branco levemente transparente */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-family: 'Lobster', sans-serif;
+    color: #ff66b2;
+}
+
+.pending,
+.synced,
+.error {
+    margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+        font-family: "Segoe UI Emoji", sans-serif;
+        /* Fonte de emojis fofos */
+        font-size: 2rem;
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.pending::before {
+    content: "🌸";
+    /* Emoji de flor */
+    color: #ffb366;
+    /* Cor laranja */
+    animation: spin 2s linear infinite;
+}
+
+.synced::before {
+    content: "✨";
+    /* Emoji de brilho */
+    color: #66ff99;
+    /* Cor verde suave */
+}
+
+.error::before {
+    content: "💔";
+    /* Emoji de coração partido */
+    color: #ff6666;
+    /* Cor vermelha suave */
+}
+
+.input-action {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    background-color: #ffe6f0;
+    /* Cor de fundo rosa claro */
+    border: 1px solid #ff66b332;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input-action::placeholder {
+    color: #ff66b2;
+    /* Cor de botão rosa vibrante */
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    /* Remover marcadores de lista */
+}
+
+li {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #eeeeee32;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    padding: 15px;
+}
+
+li button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #ff66b2;
+    /* Cor de botão rosa vibrante */
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 1.5rem;
+}
+
+li input {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    padding: .7rem;
+    background-color: #f2f2f2;
+    /* Cor de fundo cinza claro */
+    border: 1px solid #dddddd2d;
+    border-radius: 10px;
+    margin-right: 12px;
+    cursor: pointer;
+    outline: #ff66b3;
+}
