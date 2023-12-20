@@ -1,4 +1,4 @@
-# To-Do App using Vite, React, TypeScript, and SQLite3
+# To-Do App usando Vite, React, TypeScript, e SQLite3
 
 Este é um aplicativo de tarefas (To-Do) simples desenvolvido usando Vite, React, TypeScript e SQLite3. O aplicativo consiste em uma interface web para gerenciar suas tarefas, permitindo a criação, atualização e exclusão de itens da lista de afazeres.
 
